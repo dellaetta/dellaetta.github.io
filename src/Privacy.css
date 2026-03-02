@@ -1,0 +1,30 @@
+.privacy-container .text {
+    display: flex;
+    flex-direction: column;             
+    width: 80%;
+    max-width: 1200px;
+    padding: 125px 0;
+    align-items: center;
+    margin: 0 auto;
+    color: var(--dull-base);
+    background-color: var(--base);
+}
+
+.privacy-container h2, p{
+    width: 100%;
+    margin-bottom: 0; 
+}
+
+.privacy-container h2{
+    margin-top: 2rem; 
+}
+
+.footer-container {
+  background-color: var(--dull-base);
+  color: var(--light-base);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
