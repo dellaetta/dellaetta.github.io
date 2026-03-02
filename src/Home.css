@@ -199,6 +199,10 @@
   text-decoration: none;
 }
 
+.footer-container .privacy:hover{
+  color: var(--dark-base);
+}
+
 @media (max-width: 950px){
   .intro-container {
     flex-direction: column;    
@@ -214,6 +218,19 @@
 
   .home-right{
     margin-top: 0;
+  }
+}
+
+@media (max-width: 800px){
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .footer-container p{
+    width: fit-content;
   }
 }
 
