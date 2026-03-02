@@ -31,10 +31,10 @@ const Navbar = () => {
 
             <div className="navbar-right">
                 <ul className={sidebar? '' : 'hide-sidebar'}>
-                    <li><a onClick={toggleMenu} href="#education">Education</a></li>
-                    <li><a onClick={toggleMenu} href="#experience">Experience</a></li>
-                    <li><a onClick={toggleMenu} href="#project">Projects</a></li>
-                    <li><a onClick={toggleMenu} href="#contact">Contact</a></li>
+                    <li><a onClick={toggleMenu} href="/#education">Education</a></li>
+                    <li><a onClick={toggleMenu} href="/#experience">Experience</a></li>
+                    <li><a onClick={toggleMenu} href="/#project">Projects</a></li>
+                    <li><a onClick={toggleMenu} href="/#contact">Contact</a></li>
                 </ul>
             </div>
 

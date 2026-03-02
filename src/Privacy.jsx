@@ -149,7 +149,7 @@ function Privacy() {
         <div className = 'footer-container'>
             <p>Copyright © Chloe Velez 2026</p>
             <Contact type = 'footer'/>
-            <Link to="/privacy" className="privacy">Privacy Policy</Link>
+            <Link to="/privacy" className="privacy" onClick={() => window.scrollTo(0, 0)}>Privacy Policy</Link>
         </div>
     </div>
 );

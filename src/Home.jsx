@@ -41,6 +41,17 @@ function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    if (location.hash) {
+      const el = document.querySelector(location.hash);
+      if (el) {
+        setTimeout(() => {
+          el.scrollIntoView({ behavior: "smooth" });
+        }, 0);
+      }
+    }
+  }, [location]);
+
   const projects = [
     { id: 1, title: "Webserver", blurb: 'Created an HTTP/1.0 web server in C', 
       description: ["Created an HTTP/1.0 web server in C (using Vim) capable of serving static HTML and image files. Built an additional ", 
@@ -309,7 +320,7 @@ function Home() {
       <div className = 'footer-container'>
         <p>Copyright © Chloe Velez 2026</p>
         <Contact type = 'footer'/>
-        <Link to="/privacy" className="privacy">Privacy Policy</Link>
+        <Link to="/privacy" className="privacy" onClick={() => window.scrollTo(0, 0)}>Privacy Policy</Link>
       </div>
     </div>
   );
