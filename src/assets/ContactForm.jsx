@@ -32,6 +32,10 @@ function ContactForm() {
 
                 <textarea id = 'message' name = 'message' placeholder = 'Message' required/>
                 <ValidationError prefix = 'Message' field = 'message' errors = {state.errors}/>
+                <div className = 'checkbox-container'>
+                    <input type="checkbox" className="checkbox" required/> 
+                    <p>I have read and accept the privacy policy</p>
+                </div>
             </div>
 
             <button type = 'submit' disabled = {state.submitting}>
