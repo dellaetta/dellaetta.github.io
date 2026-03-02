@@ -308,8 +308,8 @@ function Home() {
 
       <div className = 'footer-container'>
         <p>Copyright © Chloe Velez 2026</p>
-        <Link to="/privacy" className="privacy">Privacy Policy</Link>
         <Contact type = 'footer'/>
+        <Link to="/privacy" className="privacy">Privacy Policy</Link>
       </div>
     </div>
   );

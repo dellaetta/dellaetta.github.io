@@ -18,13 +18,3 @@
 .privacy-container h2{
     margin-top: 2rem; 
 }
-
-.footer-container {
-  background-color: var(--dull-base);
-  color: var(--light-base);
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
