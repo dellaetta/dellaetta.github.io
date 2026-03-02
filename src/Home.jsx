@@ -142,7 +142,7 @@ function Home() {
         </div>
       </div>
 
-      <div id = 'education-container' className = 'education-container'>
+      <div id = 'education' className = 'education-container'>
         <h1 className = 'timeline_header'>Education</h1>
         <div className ='timeline timeline--d'>
           <div className ='timeline_middle timeline_middle--d'>
@@ -175,7 +175,7 @@ function Home() {
         </div>
       </div>
 
-      <div id = 'experience-container' className = 'experience-container'>
+      <div id = 'experience' className = 'experience-container'>
         <h1 className = 'timeline_header'>Experience</h1>
         <div className ='timeline timeline--x'>
 
@@ -276,7 +276,7 @@ function Home() {
         </div>
       </div>
 
-      <div id = 'project-container' className = 'projects-container'>
+      <div id = 'project' className = 'projects-container'>
         <h1>Projects</h1>
         <div className = 'projects-grid'>
           {projects.map(project => (
@@ -300,7 +300,7 @@ function Home() {
 
       </div>
 
-      <div id = 'contact-container' className = 'contact-container'>
+      <div id = 'contact' className = 'contact-container'>
         <h1>Contact Me</h1>
         <ContactForm/>
       </div>
