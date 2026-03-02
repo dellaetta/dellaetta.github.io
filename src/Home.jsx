@@ -1,11 +1,12 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import Profile from './assets/sketch';
-import ContactForm from './assets/ContactForm';
 import './App.css';
 import './Home.css';
+import Profile from './assets/sketch';
+import ContactForm from './assets/ContactForm';
 import Project from './assets/Project';
 import Contact from './assets/Contact';
+import { Link } from 'react-router-dom';
 
 import earthquake from './assets/photos/unit1-brown.png';
 import cmd from './assets/photos/unit3-brown.png';
@@ -306,7 +307,8 @@ function Home() {
       </div>
 
       <div className = 'footer-container'>
-        <p>Chloe Velez 2026</p>
+        <p>Copyright © Chloe Velez 2026</p>
+        <Link to="/privacy" className="privacy">Privacy Policy</Link>
         <Contact type = 'footer'/>
       </div>
     </div>

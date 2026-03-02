@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Home';
+import Privacy from './Privacy';
 import Navbar from './assets/Navbar';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
     </Router>
   );
