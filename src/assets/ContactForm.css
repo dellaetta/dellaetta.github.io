@@ -87,3 +87,12 @@ button:hover{
     height: 1.5rem;
     margin: 0;
 }
+
+@media (max-width: 500px){
+    form{
+        min-width: 200px;
+    }
+    .checkbox-container{
+        padding-bottom: 1.75rem;
+    }
+}
