@@ -76,7 +76,7 @@ function Home() {
     },
 
     { id: 4, title: "Wbar Website", blurb: 'Maintain and improve the WBAR radio station website', 
-      description: ["Maintained a website that streams the WBAR radio station 22 hours a day. Responsible for record updates, bug fixes, database", 
+      description: ["Maintain a website that streams the WBAR radio station 22 hours a day. Responsible for record updates, bug fixes, database", 
         "management, and ongoing feature improvements."],
       link: "https://wbar.org/ ", image: wbar, alt: 'Wbar website page'
     },
@@ -210,7 +210,7 @@ function Home() {
             <h2 className ='timeline_title'>Barnard College's Freeform Radio Station Web Team Lead | NY, NY | August 2025 - Present</h2>
             <ul>
               <li>Lead development and maintenance of the station’s website, improving frontend performance using React, JavaScript, HTML, and CSS.</li>
-              <li>Maintained backend functionality and database management with Supabase and Python.</li>
+              <li>Maintain backend functionality and database management with Supabase and Python.</li>
             </ul>
           </div>
 
