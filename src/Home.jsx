@@ -20,6 +20,7 @@ import solar from './assets/photos/solar-scape.png';
 import spend from './assets/photos/spend-mood.png';
 import wbar from './assets/photos/wbar.png';
 import webserver from './assets/photos/3157.png';
+import coins from './assets/photos/coins.png';
 
 function Home() {
   const [openProjectId, setOpenProjectId] = React.useState(null);
@@ -66,13 +67,10 @@ function Home() {
       link: 'https://www.hybound.com/', image: hybound, alt: 'Graphs showing the distribution of products purchased in the mock data'
     },
 
-    { id: 3, title: "SpendMood", blurb: 'Financial tracking application that connects user spending and to mood', 
-      description: ["Created a financial tracking application that analyzes user spending patterns and associates them with mood to help users become ", 
-        "more aware of how emotions impact their spending habits. Integrated the Capital One Nessie API to enable quick uploads of ",
-        "historical spending data. Built using Auth0 for authentication, FastAPI for the backend, Gemini for analytics, and custom CSS ",
-        "for the frontend."],
-      link: "https://devpost.com/software/spendmood?_gl=1*fzdted*_ga*MTE3MzQ3NDc5Ny4xNzY5NTE5MjEw*_ga_0YHJK3Y10M*czE3Njk1MTkyMTAkbzEkZzAkdDE3Njk1MTkyMTAkajYwJGwwJGgw", image: spend,
-      alt: 'Dashboard of SpendMood'
+    { id: 3, title: "Computer Vision Self-Study", blurb: 'Learned and practiced computer vision skills through a collection of projects', 
+      description: ["Developed a collection of small projects to independently explore computer vision concepts using OpenCV, experimenting ", 
+        "with image processing, lighting and illumination, image drawing and annotation, feature detection, and feature extraction/manipulation."],
+      link: "https://github.com/dellaetta/computer-vision-practice", image: coins, alt: 'Coins detected in a computer vision project'
     },
 
     { id: 4, title: "Wbar Website", blurb: 'Maintain and improve the WBAR radio station website', 
@@ -81,38 +79,47 @@ function Home() {
       link: "https://wbar.org/ ", image: wbar, alt: 'Wbar website page'
     },
 
-    { id: 5, title: "Shxttalks", blurb: 'Built a campus bathroom database with a review-based frontend and data integrity controls.',
+    { id: 5, title: "SpendMood", blurb: 'Financial tracking application that connects user spending and to mood', 
+      description: ["Created a financial tracking application that analyzes user spending patterns and associates them with mood to help users become ", 
+        "more aware of how emotions impact their spending habits. Integrated the Capital One Nessie API to enable quick uploads of ",
+        "historical spending data. Built using Auth0 for authentication, FastAPI for the backend, Gemini for analytics, and custom CSS ",
+        "for the frontend."],
+      link: "https://devpost.com/software/spendmood?_gl=1*fzdted*_ga*MTE3MzQ3NDc5Ny4xNzY5NTE5MjEw*_ga_0YHJK3Y10M*czE3Njk1MTkyMTAkbzEkZzAkdDE3Njk1MTkyMTAkajYwJGwwJGgw", image: spend,
+      alt: 'Dashboard of SpendMood'
+    },
+
+    { id: 6, title: "Shxttalks", blurb: 'Built a campus bathroom database with a review-based frontend and data integrity controls.',
       description: ["Created a campus bathroom database following the full database development workflow, including ER diagram design, mock data ",
         "generation, and implementation in PostgreSQL. Built a frontend that allows users to interact with the database by submitting reviews ",
         "and filtering available bathrooms. Implemented database triggers to maintain data consistency and prevent spam or duplicate submissions."],
       link: 'https://www.cs.columbia.edu/~kar/4111f25/', image: shxttalk, alt: 'Data from the buildings table'
     },
 
-    { id: 6, title: "Princeton Labatory Learning Program", blurb: 'Created a campus bathroom database following the full database development workflow', 
+    { id: 6, title: "PLL Program", blurb: 'Developed a Python-based tutoring web application integrating ChatGPT to make personalized tutoring more accessible.', 
       description: ["Conducted researched a Dr. Puchalla's lab in Princeton. In summer of 2023, Expanded upon ChatGPT's capabilities to create an AI-powered ",
         "tutoring website. Implemented image and audio uploads, converted AI responses into audio output, and designed customizable AI personalities using ",
         "pre-configured prompts and props. Additionally, worked on experimenting with AI to identify chemicals on Burst Analysis Spectroscopy data using MATLAB."],
         link: "https://sites.google.com/view/puchallalab/home", image: dill, alt: 'Dill dashboard'
     },
 
-     { id: 7, title: "Pacbot", blurb: 'Built and presented an Ardunio-controlled robotic car with multiple movement capabilites', 
+     { id: 8, title: "Pacbot", blurb: 'Built and presented an Ardunio-controlled robotic car with multiple movement capabilites', 
       description: ["Built an Arduino-controlled robotic car featuring remote control, ultrasonic obstacle avoidance, and line-following behavior; selected ",
         "to present to 300+ attendees at the STEM Institue at CCNY program’s final panel."],
       link: 'https://steminstitutenyc.org/', image: ccny, alt: 'Panel from presentation of pacbot'
     },
 
-     { id: 8, title: "Earthquakes", blurb: 'Created and analyzed a map of the recent earthquakes in Central America', 
+     { id: 9, title: "Earthquakes", blurb: 'Created and analyzed a map of the recent earthquakes in Central America', 
       description: ["Created a map of recent earthquakes in Central America, presented earthquake activity using an original diagram, and ",
         "proposed strategies to improve earthquake preparedness and reduce damage. Learned coding basics and key concepts including ",
         "seismic waves, lava, and tectonic plates."],
       link: "https://github.com/dellaetta/brown-scholars-projects/tree/main/unit1", image: earthquake, alt: 'Map of earthquakes in central america'
     },
 
-     { id: 9, title: "Stars", blurb: 'Created a Color-Magnitude Diagram (CMD) for the Prasepe star cluster using Matplotlib and pandas ', 
+     /*{ id: 9, title: "Stars", blurb: 'Created a Color-Magnitude Diagram (CMD) for the Prasepe star cluster using Matplotlib and pandas ', 
       description: ["Created and presented a Color–Magnitude Diagram (CMD) for the Praesepe star cluster. Learned Matplotlib and advanced pandas ",
         "skills while studying stellar magnitude, TGAS data, and the Hertzsprung–Russell diagram."],
       link: "https://github.com/dellaetta/brown-scholars-projects/tree/main/unit3", image: cmd, alt: 'Color magnitude diagram of praesepe'
-    },
+    },*/
 
      { id: 10, title: "COVID Map", blurb: 'Live data visualization on COVID-19 cases, deaths, and recoveries', 
       description: ["Analyzed U.S. COVID-19 data by visualizing cases, deaths, and recoveries, with a focused study on New York. Gained experience working ",
@@ -164,13 +171,24 @@ function Home() {
           <div className ='timeline_component timeline_component--bg'>
             <h2 className ='timeline_title'>Columbia University | BS Computer Science | NY, NY | Expected: May 2028</h2>
             <ul>
-              <li>Relevant courses: Cryptography: Theory & Practice (in progress), Inferential Statistics (in progress), Linear Algebra for Engineers (in progress),
-                Web Development (in progress), Advance Programming (C), Discrete, Introduction to Databases (SQL), Data Structures 
-                and Algorithms in Java, Introduction to Java, Introduction to Computing for Engineers and Applied Scientists (Python)
-                and Multivariable calculus.
+              <li>Relevant courses: Artifical Intelligence (in progress), Fundamentals of Computer Systems (in progress), 
+                Introduction to Robotics (in progress), Introduction to Databases (SQL), Data Structures and Algorithms in Java, 
+                Advance Programming (C), Discrete, and Multivariable Calculus.
               </li>
             <li>Clubs: Barnard College's Freeform Radio Station (WBAR) and CUCyber</li>
           </ul>
+          </div>
+
+          <div className ='timeline_middle timeline_middle--d'>
+            <div className ='timeline_point timeline_point--d'></div>
+          </div>
+
+          <div className ='timeline_component timeline_component timeline_component--bg'>
+            <h2 className ='timeline_title'>University College Dublin | Dublin, Ireland | Spring 2026</h2>
+            <ul>
+              <li>Relevant courses: Cryptography: Theory & Practice, Inferential Statistics, and Linear Algebra for Engineers</li>
+              <li>Clubs: UCD Trampoline Club</li>
+            </ul>
           </div>
 
           <div className ='timeline_middle timeline_middle--d'>
@@ -195,11 +213,29 @@ function Home() {
             <div className ='timeline_point timeline_point--x'></div>
           </div>
           <div className ='timeline_component timeline_component--bg'>
+            <h2 className ='timeline_title'>Homeless Solutions Data Quality and Evaluation Intern | NY, NY | Summer 2026</h2>
+            <ul>
+              <li>Queried data from the Homeless Management Information System (HMIS) database into Excel, performing data 
+                cleanings to improve accuracy.</li>
+              <li>Developed TypeScript-based Office Scripts and Excel formulas to automate repetitive tasks, reduce errors, 
+                and improve consistency</li>
+              <li>Automated weekly and quarterly reports, reducing the processing time of one report from 7 hours to 20 minutes.</li>
+              <li>Communicated report results to management and documented workflows for maintainability and reuse.</li>
+            </ul>
+          </div>
+
+          <div className ='timeline_middle timeline_middle--x'>
+            <div className ='timeline_point timeline_point--x'></div>
+          </div>
+          <div className ='timeline_component timeline_component--bg'>
             <h2 className ='timeline_title'>Hybound Intern | NY, NY | Summer 2025</h2>
             <ul>
-              <li>Developed an open-source CLI in TypeScript to generate test data in Stripe sandbox.</li>
-              <li>Built a method to adapt Stripe test clocks for creating historical datasets.</li>
-              <li>Designed commands to generate realistic customer purchase patterns for testing purposes.</li>
+              <li>Developed an open-source TypeScript CLI for generating test data in Stripe Sandbox, enabling developers 
+                to quickly populate environments for testing and development.</li>
+              <li>Integrated with the Stripe API to automate creation of test customers, transactions, and related data 
+                through configurable CLI commands.</li>
+              <li>Developed a method for adapting Stripe Test Clocks to generate historical data and simulate customer 
+                activity at different points in time.</li>
             </ul>
           </div>
 
@@ -231,9 +267,13 @@ function Home() {
           <div className ='timeline_component timeline_component--bg'>
             <h2 className ='timeline_title'>Princeton University Laboratory Learning Program | Princeton, NJ | Summer 2023</h2>
             <ul>
-              <li>Conducted research in Dr. Jason Puchalla’s biophysics lab, creating an AI-enhanced tutoring interface and tools for burst spectroscopy data analysis.</li>
-              <li>Gained hands-on experience with Matplotlib, JavaScript, React, HTML, Streamlit, and Jupyter Notebooks.</li>
-              <li>Presented bi-weekly research updates to lab mentors and peers.</li>
+              <li>Developed a Python-based tutoring web application integrating ChatGPT to make personalized tutoring more accessible, using 
+                Streamlit, React, JavaScript, and HTML, with speech-to-text, text-to-speech, and OCR capabilities.</li>
+              <li>Designed and implemented the application's user interface and accessibility-focused workflows, and deployed the application 
+                using PythonAnywhere.</li>
+              <li>Researched AI models for separating signals and explored how they could be applied to burst analysis spectroscopy data, 
+                testing different approaches in MATLAB and Jupyter Notebooks.</li>
+              <li>Presented project progress, findings, and technical approaches during biweekly research team meetings.</li>
             </ul>
           </div>
 

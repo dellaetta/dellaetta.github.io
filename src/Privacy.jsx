@@ -103,7 +103,7 @@ function Privacy() {
                 through the contact form. 
             </p>
 
-            <h2>Opt-Out</h2>
+            <h2>Opt-Out of Mailing Address</h2>
             <p>If you do not want to receive email and/or mailings from us in the future, please let me know by sending an email 
                 to me at the contact address below in the paragraph “How to Contact Us”, requesting to be removed from our 
                 email/mailing list. Please note that there might be a brief delay between when you submit your request to opt-out 
