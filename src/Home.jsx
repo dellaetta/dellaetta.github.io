@@ -95,7 +95,7 @@ function Home() {
       link: 'https://www.cs.columbia.edu/~kar/4111f25/', image: shxttalk, alt: 'Data from the buildings table'
     },
 
-    { id: 6, title: "PLL Program", blurb: 'Developed a Python-based tutoring web application integrating ChatGPT to make personalized tutoring more accessible.', 
+    { id: 7, title: "PLL Program", blurb: 'Developed a Python-based tutoring web application integrating ChatGPT to make personalized tutoring more accessible.', 
       description: ["Conducted researched a Dr. Puchalla's lab in Princeton. In summer of 2023, Expanded upon ChatGPT's capabilities to create an AI-powered ",
         "tutoring website. Implemented image and audio uploads, converted AI responses into audio output, and designed customizable AI personalities using ",
         "pre-configured prompts and props. Additionally, worked on experimenting with AI to identify chemicals on Burst Analysis Spectroscopy data using MATLAB."],
