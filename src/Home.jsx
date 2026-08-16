@@ -219,7 +219,7 @@ function Home() {
                 cleanings to improve accuracy.</li>
               <li>Developed TypeScript-based Office Scripts and Excel formulas to automate repetitive tasks, reduce errors, 
                 and improve consistency</li>
-              <li>Automated weekly and quarterly reports, reducing the processing time of one report from 7 hours to 20 minutes.</li>
+              <li>Proposed and implemented automation for weekly and quarterly reports, reducing the processing time of one report from 7 hours to 20 minutes.</li>
               <li>Communicated report results to management and documented workflows for maintainability and reuse.</li>
             </ul>
           </div>
