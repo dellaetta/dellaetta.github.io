@@ -21,6 +21,7 @@ import spend from './assets/photos/spend-mood.png';
 import wbar from './assets/photos/wbar.png';
 import webserver from './assets/photos/3157.png';
 import coins from './assets/photos/coins.png';
+import signit from './assets/photos/signit.png';
 
 function Home() {
   const [openProjectId, setOpenProjectId] = React.useState(null);
@@ -57,7 +58,7 @@ function Home() {
     { id: 1, title: "Webserver", blurb: 'Created an HTTP/1.0 web server in C', 
       description: ["Created an HTTP/1.0 web server in C (using Vim) capable of serving static HTML and image files. Built an additional ", 
       "dynamic component that connects with a database server to allow users to search through messages. The server supports GET requests ",
-      "from HTTP/1.0 and HTTP/1.1 clients and handles errors responses including 400, 403, 404, and 501. "], 
+      "from HTTP/1.0 and HTTP/1.1 clients and handles errors responses including 400, 403, 404, and 501."], 
       link: 'https://cs3157.github.io/www/2025-9/', image: webserver, alt: 'Welcome page of the Advance Programming computer'
     },
 
@@ -67,19 +68,26 @@ function Home() {
       link: 'https://www.hybound.com/', image: hybound, alt: 'Graphs showing the distribution of products purchased in the mock data'
     },
 
-    { id: 3, title: "Computer Vision Self-Study", blurb: 'Learned and practiced computer vision skills through a collection of projects', 
+    { id: 3, title: "Sign It", blurb: 'Gesture-controlled game inspired by Bob It, combining Python, computer vision, and Unity.', 
+      description: ["Developed a gesture-controlled game inspired by Bop It, integrating Python-based computer vision with Unity for real-time gameplay.", 
+        "Implemented real-time hand tracking and gesture recognition using OpenCV and MediaPipe to detect player inputs from a live camera feed.",
+        "Built UDP socket communication to transmit recognized gestures from Python to Unity, connecting the computer vision pipeline with game logic and visuals. "],
+      link: 'https://github.com/dellaetta/sign-it', image: signit, alt: 'Display of game in use, showing hand-tracking overlay'
+    },
+
+    { id: 4, title: "Computer Vision Self-Study", blurb: 'Learned and practiced computer vision skills through a collection of projects', 
       description: ["Developed a collection of small projects to independently explore computer vision concepts using OpenCV, experimenting ", 
-        "with image processing, lighting and illumination, image drawing and annotation, feature detection, and feature extraction/manipulation."],
+        "with image processing, lighting and illumination, image drawing and annotation, feature detection, and feature extraction/manipulation. "],
       link: "https://github.com/dellaetta/computer-vision-practice", image: coins, alt: 'Coins detected in a computer vision project'
     },
 
-    { id: 4, title: "Wbar Website", blurb: 'Maintain and improve the WBAR radio station website', 
+    { id: 5, title: "Wbar Website", blurb: 'Maintain and improve the WBAR radio station website', 
       description: ["Maintain a website that streams the WBAR radio station 22 hours a day. Responsible for record updates, bug fixes, database", 
         "management, and ongoing feature improvements."],
       link: "https://wbar.org/ ", image: wbar, alt: 'Wbar website page'
     },
 
-    { id: 5, title: "SpendMood", blurb: 'Financial tracking application that connects user spending and to mood', 
+    { id: 6, title: "SpendMood", blurb: 'Financial tracking application that connects user spending and to mood', 
       description: ["Created a financial tracking application that analyzes user spending patterns and associates them with mood to help users become ", 
         "more aware of how emotions impact their spending habits. Integrated the Capital One Nessie API to enable quick uploads of ",
         "historical spending data. Built using Auth0 for authentication, FastAPI for the backend, Gemini for analytics, and custom CSS ",
@@ -88,26 +96,27 @@ function Home() {
       alt: 'Dashboard of SpendMood'
     },
 
-    { id: 6, title: "Shxttalks", blurb: 'Built a campus bathroom database with a review-based frontend and data integrity controls.',
+    { id: 7, title: "Shxttalks", blurb: 'Built a campus bathroom database with a review-based frontend and data integrity controls.',
       description: ["Created a campus bathroom database following the full database development workflow, including ER diagram design, mock data ",
         "generation, and implementation in PostgreSQL. Built a frontend that allows users to interact with the database by submitting reviews ",
         "and filtering available bathrooms. Implemented database triggers to maintain data consistency and prevent spam or duplicate submissions."],
       link: 'https://www.cs.columbia.edu/~kar/4111f25/', image: shxttalk, alt: 'Data from the buildings table'
     },
 
-    { id: 7, title: "PLL Program", blurb: 'Developed a Python-based tutoring web application integrating ChatGPT to make personalized tutoring more accessible.', 
+    { id: 8, title: "PLL Program", blurb: 'Developed a Python-based tutoring web application integrating ChatGPT to make personalized tutoring more accessible.', 
       description: ["Conducted researched a Dr. Puchalla's lab in Princeton. In summer of 2023, Expanded upon ChatGPT's capabilities to create an AI-powered ",
         "tutoring website. Implemented image and audio uploads, converted AI responses into audio output, and designed customizable AI personalities using ",
         "pre-configured prompts and props. Additionally, worked on experimenting with AI to identify chemicals on Burst Analysis Spectroscopy data using MATLAB."],
         link: "https://sites.google.com/view/puchallalab/home", image: dill, alt: 'Dill dashboard'
     },
 
-     { id: 8, title: "Pacbot", blurb: 'Built and presented an Ardunio-controlled robotic car with multiple movement capabilites', 
+     { id: 9, title: "Pacbot", blurb: 'Built and presented an Ardunio-controlled robotic car with multiple movement capabilites', 
       description: ["Built an Arduino-controlled robotic car featuring remote control, ultrasonic obstacle avoidance, and line-following behavior; selected ",
         "to present to 300+ attendees at the STEM Institue at CCNY program’s final panel."],
       link: 'https://steminstitutenyc.org/', image: ccny, alt: 'Panel from presentation of pacbot'
     },
 
+    /*
      { id: 9, title: "Earthquakes", blurb: 'Created and analyzed a map of the recent earthquakes in Central America', 
       description: ["Created a map of recent earthquakes in Central America, presented earthquake activity using an original diagram, and ",
         "proposed strategies to improve earthquake preparedness and reduce damage. Learned coding basics and key concepts including ",
@@ -115,7 +124,7 @@ function Home() {
       link: "https://github.com/dellaetta/brown-scholars-projects/tree/main/unit1", image: earthquake, alt: 'Map of earthquakes in central america'
     },
 
-     /*{ id: 9, title: "Stars", blurb: 'Created a Color-Magnitude Diagram (CMD) for the Prasepe star cluster using Matplotlib and pandas ', 
+    { id: 9, title: "Stars", blurb: 'Created a Color-Magnitude Diagram (CMD) for the Prasepe star cluster using Matplotlib and pandas ', 
       description: ["Created and presented a Color–Magnitude Diagram (CMD) for the Praesepe star cluster. Learned Matplotlib and advanced pandas ",
         "skills while studying stellar magnitude, TGAS data, and the Hertzsprung–Russell diagram."],
       link: "https://github.com/dellaetta/brown-scholars-projects/tree/main/unit3", image: cmd, alt: 'Color magnitude diagram of praesepe'
@@ -171,9 +180,9 @@ function Home() {
           <div className ='timeline_component timeline_component--bg'>
             <h2 className ='timeline_title'>Columbia University | BS Computer Science | NY, NY | Expected: May 2028</h2>
             <ul>
-              <li>Relevant courses: Artifical Intelligence (in progress), Fundamentals of Computer Systems (in progress), 
-                Introduction to Robotics (in progress), Introduction to Databases (SQL), Data Structures and Algorithms in Java, 
-                Advance Programming (C), Discrete, and Multivariable Calculus.
+              <li>Relevant courses: Fund-Large-Scale Distributed Systems (in progress), Artifical Intelligence (in progress), Fundamentals of Computer Systems (in progress), 
+                Computational Aspects of Robotics (in progress), Introduction to Databases (SQL), Data Structures and Algorithms in Java, 
+                Advance Programming (C), Discrete, and Multivariable Calculus
               </li>
             <li>Clubs: Barnard College's Freeform Radio Station (WBAR) and CUCyber</li>
           </ul>
@@ -256,8 +265,9 @@ function Home() {
           <div className ='timeline_component timeline_component--bg'>
             <h2 className ='timeline_title'>Math Tutor | NY, NY | 2023 - 2024</h2>
             <ul>
-              <li>Provided weekly tutoring in algebra to a 7th-grade student, improving grades from 70–80% to 90%+.</li>
-              <li>Strengthened communication and instructional skills through personalized lesson planning and ski instructor training clinics.</li>
+              <li>Provided weekly, one-on-one algebra tutoring to a 7th-grade student, improving grades from 70–80% to 90%+.</li>
+              <li>Developed personalized lesson plans and adapted instruction to student's learning needs, strengthening mathematical reasoning and problem-solving skills.</li>
+              <li>Explained concepts using clear, approachable instruction and provided targeted practice to reinforce understanding.</li>
             </ul>
           </div>
 
