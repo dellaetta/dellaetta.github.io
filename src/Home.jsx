@@ -22,6 +22,9 @@ import wbar from './assets/photos/wbar.png';
 import webserver from './assets/photos/3157.png';
 import coins from './assets/photos/coins.png';
 import signit from './assets/photos/signit.png';
+import mcp from './assets/photos/mcp.png';
+import ai from './assets/photos/ai.png';
+
 
 function Home() {
   const [openProjectId, setOpenProjectId] = React.useState(null);
@@ -55,39 +58,53 @@ function Home() {
   }, [location]);
 
   const projects = [
-    { id: 1, title: "Webserver", blurb: 'Created an HTTP/1.0 web server in C', 
+    { id: 1, title: "MCP Server", blurb: 'Created a MCP Server in Python from scratch', 
+      description: ["Built a Model Context Protocol (MCP) server from scratch in Python on the hpp.server library, implementing the protocol’s ", 
+        "requisition handling and tool discovery without an MCP SDK. Implemented 4 tools callable by LLM clients: current date, weekday lookup for ", 
+        "any date, a calculator, and a countdown timer that streams live updates over Server-Sent Events (SSE)."], 
+      link: 'https://www.cs.columbia.edu/~hgs/teaching/networks/', image: mcp, alt: 'MCP inspector starting screen'
+    },
+
+    { id: 2, title: "2048 AI Solver", blurb: 'Created an AI to solve 2048', 
+      description: ["Built an AI agent that plays 2048 using expectiminimax search, modeling random tile spawns as chance nodes in the game tree. ",
+        "Used alpha-beta pruning to cut unneeded branches, searching deeper within a 0.2-second-per-move time limit. ",
+        "Designed a heuristic that scores boards on empty tiles, smoothness, monotonicity, and keeping the largest tile in a corner, reaching a highest tile of 4096."], 
+        image: ai, alt: 'Winning 2048 board found by the AI'
+    },
+
+    { id: 3, title: "Webserver", blurb: 'Created an HTTP/1.0 web server in C', 
       description: ["Created an HTTP/1.0 web server in C (using Vim) capable of serving static HTML and image files. Built an additional ", 
       "dynamic component that connects with a database server to allow users to search through messages. The server supports GET requests ",
       "from HTTP/1.0 and HTTP/1.1 clients and handles errors responses including 400, 403, 404, and 501."], 
       link: 'https://cs3157.github.io/www/2025-9/', image: webserver, alt: 'Welcome page of the Advance Programming computer'
     },
 
-    { id: 2, title: "Hybound", blurb: 'Created mock Stripe data', 
+    { id: 4, title: "Hybound", blurb: 'Created mock Stripe data', 
       description: ["Worked with the Stripe API to generate mock test data for a B2B startup. Built a CLI tool to create historical and ", 
         "current customer data with multiple configurable data patterns."],
       link: 'https://www.hybound.com/', image: hybound, alt: 'Graphs showing the distribution of products purchased in the mock data'
     },
 
-    { id: 3, title: "Sign It", blurb: 'Gesture-controlled game inspired by Bob It, combining Python, computer vision, and Unity.', 
+    { id: 5, title: "Sign It", blurb: 'Gesture-controlled game inspired by Bob It, combining Python, computer vision, and Unity.', 
       description: ["Developed a gesture-controlled game inspired by Bop It, integrating Python-based computer vision with Unity for real-time gameplay.", 
         "Implemented real-time hand tracking and gesture recognition using OpenCV and MediaPipe to detect player inputs from a live camera feed.",
         "Built UDP socket communication to transmit recognized gestures from Python to Unity, connecting the computer vision pipeline with game logic and visuals. "],
       link: 'https://github.com/dellaetta/sign-it', image: signit, alt: 'Display of game in use, showing hand-tracking overlay'
     },
 
-    { id: 4, title: "Computer Vision Self-Study", blurb: 'Learned and practiced computer vision skills through a collection of projects', 
+    { id: 6, title: "Computer Vision Self-Study", blurb: 'Learned and practiced computer vision skills through a collection of projects', 
       description: ["Developed a collection of small projects to independently explore computer vision concepts using OpenCV, experimenting ", 
         "with image processing, lighting and illumination, image drawing and annotation, feature detection, and feature extraction/manipulation. "],
       link: "https://github.com/dellaetta/computer-vision-practice", image: coins, alt: 'Coins detected in a computer vision project'
     },
 
-    { id: 5, title: "Wbar Website", blurb: 'Maintain and improve the WBAR radio station website', 
+    { id: 7, title: "Wbar Website", blurb: 'Maintain and improve the WBAR radio station website', 
       description: ["Maintain a website that streams the WBAR radio station 22 hours a day. Responsible for record updates, bug fixes, database", 
         "management, and ongoing feature improvements."],
       link: "https://wbar.org/ ", image: wbar, alt: 'Wbar website page'
     },
 
-    { id: 6, title: "SpendMood", blurb: 'Financial tracking application that connects user spending and to mood', 
+    { id: 8, title: "SpendMood", blurb: 'Financial tracking application that connects user spending and to mood', 
       description: ["Created a financial tracking application that analyzes user spending patterns and associates them with mood to help users become ", 
         "more aware of how emotions impact their spending habits. Integrated the Capital One Nessie API to enable quick uploads of ",
         "historical spending data. Built using Auth0 for authentication, FastAPI for the backend, Gemini for analytics, and custom CSS ",
@@ -96,21 +113,21 @@ function Home() {
       alt: 'Dashboard of SpendMood'
     },
 
-    { id: 7, title: "Shxttalks", blurb: 'Built a campus bathroom database with a review-based frontend and data integrity controls.',
+    { id: 9, title: "Shxttalks", blurb: 'Built a campus bathroom database with a review-based frontend and data integrity controls.',
       description: ["Created a campus bathroom database following the full database development workflow, including ER diagram design, mock data ",
         "generation, and implementation in PostgreSQL. Built a frontend that allows users to interact with the database by submitting reviews ",
         "and filtering available bathrooms. Implemented database triggers to maintain data consistency and prevent spam or duplicate submissions."],
       link: 'https://www.cs.columbia.edu/~kar/4111f25/', image: shxttalk, alt: 'Data from the buildings table'
     },
 
-    { id: 8, title: "PLL Program", blurb: 'Developed a Python-based tutoring web application integrating ChatGPT to make personalized tutoring more accessible.', 
+    { id: 10, title: "PLL Program", blurb: 'Developed a Python-based tutoring web application integrating ChatGPT to make personalized tutoring more accessible.', 
       description: ["Conducted researched a Dr. Puchalla's lab in Princeton. In summer of 2023, Expanded upon ChatGPT's capabilities to create an AI-powered ",
         "tutoring website. Implemented image and audio uploads, converted AI responses into audio output, and designed customizable AI personalities using ",
         "pre-configured prompts and props. Additionally, worked on experimenting with AI to identify chemicals on Burst Analysis Spectroscopy data using MATLAB."],
         link: "https://sites.google.com/view/puchallalab/home", image: dill, alt: 'Dill dashboard'
     },
 
-     { id: 9, title: "Pacbot", blurb: 'Built and presented an Ardunio-controlled robotic car with multiple movement capabilites', 
+     { id: 11, title: "Pacbot", blurb: 'Built and presented an Ardunio-controlled robotic car with multiple movement capabilites', 
       description: ["Built an Arduino-controlled robotic car featuring remote control, ultrasonic obstacle avoidance, and line-following behavior; selected ",
         "to present to 300+ attendees at the STEM Institue at CCNY program’s final panel."],
       link: 'https://steminstitutenyc.org/', image: ccny, alt: 'Panel from presentation of pacbot'
@@ -130,19 +147,19 @@ function Home() {
       link: "https://github.com/dellaetta/brown-scholars-projects/tree/main/unit3", image: cmd, alt: 'Color magnitude diagram of praesepe'
     },*/
 
-     { id: 10, title: "COVID Map", blurb: 'Live data visualization on COVID-19 cases, deaths, and recoveries', 
+     { id: 12, title: "COVID Map", blurb: 'Live data visualization on COVID-19 cases, deaths, and recoveries', 
       description: ["Analyzed U.S. COVID-19 data by visualizing cases, deaths, and recoveries, with a focused study on New York. Gained experience working ",
         "with live datasets, Plotly, and choropleth maps."],
       link: "https://github.com/dellaetta/brown-scholars-projects/tree/main/unit6", image: covid, alt: 'Map indicating the amount of covid related deaths in the United States'
     },
 
-     { id: 11, title: "Solar Scapes", blurb: 'Finalist for the Game for Change competition', 
+     { id: 13, title: "Solar Scapes", blurb: 'Finalist for the Game for Change competition', 
       description: ["Developed a Scratch game to raise awareness about sustainable cities. Players improve the environmental impact of their town by ",
         "completing mini-games. Awarded 2022 Games for Change Sustainable Cities Award Finalist, Northeast Senior Division."],
       link: "https://scratch.mit.edu/projects/656913371/", image: solar, alt: 'title screen of solar scapes video game'
     },
 
-     { id: 12, title: "Plants vs Zombies", blurb: 'Manufactured an arcade version of the classic Plants vs Zombies game', 
+     { id: 14, title: "Plants vs Zombies", blurb: 'Manufactured an arcade version of the classic Plants vs Zombies game', 
       description: ["Collaborated with a team to build a real-life Plants vs. Zombies–inspired game. Contributed on the manufacturing team by ",
         "laser-cutting wooden components and designing and 3D printing a rack-and-pinion system."],
       link: "https://www.coursicle.com/columbia/courses/ENGI/E1102/", image: pvz, alt: 'Plants vs zombies project'
@@ -180,11 +197,9 @@ function Home() {
           <div className ='timeline_component timeline_component--bg'>
             <h2 className ='timeline_title'>Columbia University | BS Computer Science | NY, NY | Expected: May 2028</h2>
             <ul>
-              <li>Relevant courses: Fund-Large-Scale Distributed Systems (in progress), Artifical Intelligence (in progress), Fundamentals of Computer Systems (in progress), 
-                Computational Aspects of Robotics (in progress), Introduction to Databases (SQL), Data Structures and Algorithms in Java, 
+              <li>Relevant courses: Computer Networks, Artifical Intelligence, Fundamentals of Computer Systems, Introduction to Databases (SQL), Data Structures and Algorithms in Java, 
                 Advance Programming (C), Discrete, and Multivariable Calculus
               </li>
-            <li>Clubs: Barnard College's Freeform Radio Station (WBAR) and CUCyber</li>
           </ul>
           </div>
 
@@ -222,7 +237,20 @@ function Home() {
             <div className ='timeline_point timeline_point--x'></div>
           </div>
           <div className ='timeline_component timeline_component--bg'>
-            <h2 className ='timeline_title'>Homeless Solutions Data Quality and Evaluation Intern | NY, NY | Summer 2026</h2>
+            <h2 className ='timeline_title'>Student Researcher | Manhattan Reasoning Project | Columbia University | New York, NY | Present</h2>
+            <ul>
+              <li>Create public-facing videos explaining how to use the Manhattan Reasoning product and how the industry 
+                is combining AI with hardware design, translating technical research for the general audience.</li>
+              <li>Designed and filmed an experiment comparing KiCad’s AI-based and traditional autorouting on a 
+                555 timer circuit, evaluating via count, DRC errors, routing time, and trace length</li>
+              </ul>
+          </div>
+
+          <div className ='timeline_middle timeline_middle--x'>
+            <div className ='timeline_point timeline_point--x'></div>
+          </div>
+          <div className ='timeline_component timeline_component--bg'>
+            <h2 className ='timeline_title'>Data Quality and Evaluation Intern | Homeless Solutions | Morristown, NJ | Summer 2026</h2>
             <ul>
               <li>Queried data from the Homeless Management Information System (HMIS) database into Excel, performing data 
                 cleanings to improve accuracy.</li>
@@ -237,7 +265,7 @@ function Home() {
             <div className ='timeline_point timeline_point--x'></div>
           </div>
           <div className ='timeline_component timeline_component--bg'>
-            <h2 className ='timeline_title'>Hybound Intern | NY, NY | Summer 2025</h2>
+            <h2 className ='timeline_title'>Software Engineering Intern | Hybound | New York, NY | Summer 2025</h2>
             <ul>
               <li>Developed an open-source TypeScript CLI for generating test data in Stripe Sandbox, enabling developers 
                 to quickly populate environments for testing and development.</li>
@@ -252,7 +280,7 @@ function Home() {
             <div className ='timeline_point timeline_point--x'></div>
           </div>
           <div className ='timeline_component timeline_component--bg'>
-            <h2 className ='timeline_title'>Barnard College's Freeform Radio Station Web Team Lead | NY, NY | August 2025 - Present</h2>
+            <h2 className ='timeline_title'>Web Team Lead | Barnard College's Freeform Radio Station | New York, NY | Fall 2025</h2>
             <ul>
               <li>Lead development and maintenance of the station’s website, improving frontend performance using React, JavaScript, HTML, and CSS.</li>
               <li>Maintain backend functionality and database management with Supabase and Python.</li>
@@ -263,7 +291,7 @@ function Home() {
             <div className ='timeline_point timeline_point--x'></div>
           </div>
           <div className ='timeline_component timeline_component--bg'>
-            <h2 className ='timeline_title'>Math Tutor | NY, NY | 2023 - 2024</h2>
+            <h2 className ='timeline_title'>Math Tutor | New York, NY | 2023 - 2024</h2>
             <ul>
               <li>Provided weekly, one-on-one algebra tutoring to a 7th-grade student, improving grades from 70–80% to 90%+.</li>
               <li>Developed personalized lesson plans and adapted instruction to student's learning needs, strengthening mathematical reasoning and problem-solving skills.</li>
@@ -275,7 +303,7 @@ function Home() {
             <div className ='timeline_point timeline_point--x'></div>
           </div>
           <div className ='timeline_component timeline_component--bg'>
-            <h2 className ='timeline_title'>Princeton University Laboratory Learning Program | Princeton, NJ | Summer 2023</h2>
+            <h2 className ='timeline_title'>Laboratory Learning Researcher | Princeton University | Princeton, NJ | Summer 2023</h2>
             <ul>
               <li>Developed a Python-based tutoring web application integrating ChatGPT to make personalized tutoring more accessible, using 
                 Streamlit, React, JavaScript, and HTML, with speech-to-text, text-to-speech, and OCR capabilities.</li>
@@ -291,7 +319,7 @@ function Home() {
             <div className ='timeline_point timeline_point--x'></div>
           </div>
           <div className ='timeline_component timeline_component--bg'>
-            <h2 className ='timeline_title'>City College of New York (CCNY) STEM Institute | NY, NY | Summer 2022</h2>
+            <h2 className ='timeline_title'>Scholar | City College of New York (CCNY) STEM Institute | New York, NY | Summer 2022</h2>
             <ul>
               <li>Completed two six-week college-level courses in Engineering Design and Entrepreneurship.</li>
               <li>Built a fully functional robot in C++ with light and sonic sensors and remote control capabilities.</li>
@@ -304,7 +332,7 @@ function Home() {
             <div className ='timeline_point timeline_point--x'></div>
           </div>
           <div className ='timeline_component timeline_component--bg'>
-            <h2 className ='timeline_title'>School of Interactive Arts | NY, NY | Summer 2021</h2>
+            <h2 className ='timeline_title'>Scholar | Urban Arts | New York, NY | Summer 2021</h2>
              <ul>
               <li>Completed a five-week intensive program in game design, digital animation, augmented reality, and music production.</li>
               <li>Learned C# programming in Unity to create interactive games and AR experiences.</li>
@@ -317,7 +345,7 @@ function Home() {
             <div className ='timeline_point timeline_point--x'></div>
           </div>
           <div className ='timeline_component timeline_component timeline_component--bg'>
-            <h2 className ='timeline_title'>Brown Scholars Program | American Museum of Natural History | NY, NY | 2020 – 2021</h2>
+            <h2 className ='timeline_title'>Brown Scholar | American Museum of Natural History | NY, NY | 2020 – 2021</h2>
             <ul>
               <li>Completed 120 hours of coursework in Python, data visualization, and databases, applying computer science to scientific topics.</li>
               <li>Studied topics including COVID-19 trends, DNA-to-RNA translation, earthquakes, and climate change.</li>
